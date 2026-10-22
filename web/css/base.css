@@ -1,0 +1,10 @@
+:root{color-scheme:dark;--bg:#080b09;--panel:#0d110e;--line:#1e2621;--line2:#2a342e;--tx:#f2f5f3;--mu:#7d8a82;--g:#5eea7a;--lime:#c6ff4d;--amber:#f5b83d;--red:#ff6b5e;
+--mono:"JetBrains Mono",ui-monospace,Menlo,monospace;--sans:Inter,system-ui,sans-serif}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:var(--sans);padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--g);outline-offset:2px}
+.lbl,.mono{font-family:var(--mono);text-transform:uppercase;letter-spacing:.12em;font-size:10px;color:var(--mu)}
+.dot{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--g);margin-right:7px;vertical-align:middle}
+.card{border:1px solid var(--line2);background:var(--panel)}

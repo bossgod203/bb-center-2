@@ -1,0 +1,36 @@
+body{display:flex;min-height:100vh}
+nav{width:54px;flex:none;border-right:1px solid var(--line);display:flex;flex-direction:column;align-items:center;gap:8px;padding:12px 0}
+nav .i{width:38px;height:38px;display:grid;place-items:center;border:1px solid transparent;color:var(--mu);font-size:14px}
+nav .i:hover{color:var(--tx)}nav .i[aria-current=page]{border-color:var(--line2);color:var(--g);background:#101a13}
+nav .out{margin-top:auto}
+.av{width:24px;height:24px;border-radius:50%;background:#3b2d63;display:grid;place-items:center;font:600 9px var(--sans)}
+main{flex:1;min-width:0;padding:18px 36px 40px}
+header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding-bottom:16px;border-bottom:1px solid var(--line);margin-bottom:24px}
+header h2{margin:6px 0 0;font:500 13px var(--sans);color:#c9d1cc}
+.chip{border:1px solid var(--line2);background:var(--panel);padding:9px 14px}.chip b{font:400 12px var(--mono);color:var(--tx);margin-left:8px;letter-spacing:0}
+.chip.err b{color:var(--amber)}
+.hero{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:22px 24px;margin-bottom:16px}
+.hero h1{margin:10px 0 8px;font:600 25px/1.15 var(--sans);letter-spacing:-.01em}.hero p{margin:0;color:var(--mu);font-size:13px}
+.hero .ok{color:var(--g)}.hero .warn{color:var(--amber)}
+.meta{display:flex;gap:28px;padding-left:24px;border-left:1px solid var(--line)}.meta b{display:block;margin-top:6px;font:500 15px var(--mono);color:var(--tx)}
+.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-bottom:16px}
+.stat{padding:14px 16px 12px;min-height:108px;position:relative}.stat .ic{position:absolute;right:14px;top:12px;font-size:11px;color:var(--mu)}
+.stat .v{font:600 32px/1 var(--sans);margin:16px 0 10px;letter-spacing:-.02em}.stat .v small{font-size:20px;color:#aab4ae}
+.stat .s{font-size:11px;color:var(--mu)}.stat .s b{color:var(--tx);font-weight:600}.stat a{color:var(--amber);font-size:11px;text-decoration:none}.stat a:hover{text-decoration:underline}
+.cols{display:grid;grid-template-columns:2fr 1fr;gap:16px}
+.pn{padding:16px 18px}.pn .top{display:flex;justify-content:space-between;align-items:center}.pn h3{margin:8px 0 14px;font:600 16px var(--sans)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line2)}
+.grid div{padding:14px 16px;border-right:1px solid var(--line2);border-bottom:1px solid var(--line2);min-height:92px}
+.grid div:nth-child(3n){border-right:0}.grid div:nth-child(n+4){border-bottom:0}
+.grid b{display:block;font:600 26px var(--sans);margin:12px 0 6px}.grid span{font-size:11px;color:var(--mu)}.grid .g{color:var(--g)}
+.badge{border:1px solid #1f5a2f;background:#0e2314;color:var(--g);font:500 9px var(--mono);letter-spacing:.14em;padding:4px 10px}.badge.bad{border-color:#6b4a10;background:#241a08;color:var(--amber)}
+.tabs{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line2);margin-bottom:14px}
+.tabs button{padding:10px 0;text-align:center;border-right:1px solid var(--line2)}.tabs button:last-child{border:0}
+.tabs button[aria-selected=true]{background:#121a14}.tabs b{display:block;font:600 14px var(--sans)}.tabs span{font:9px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--mu)}
+.chart{height:92px;display:flex;align-items:flex-end;gap:4px;border-bottom:1px solid var(--line)}
+.chart i{flex:1;background:#27332b;min-height:3px;transition:height .3s}.chart i:last-child{background:var(--lime)}
+.axis{display:flex;justify-content:space-between;margin:8px 0 14px}.axis .lbl{font-size:9px}
+.foot{font-size:11px;color:var(--mu)}.foot b{color:var(--tx);font-weight:500}
+.empty{padding:60px 24px;text-align:center;color:var(--mu)}.empty h1{margin:0 0 8px;color:var(--tx);font-size:20px}
+@media(max-width:1000px){.stats{grid-template-columns:repeat(2,1fr)}.cols{grid-template-columns:1fr}.hero{flex-direction:column;align-items:flex-start}.meta{border:0;padding:0}main{padding:16px}}
+@media(max-width:520px){.grid{grid-template-columns:1fr 1fr}.grid div:nth-child(3n){border-right:1px solid var(--line2)}.grid div:nth-child(2n){border-right:0}.grid div:nth-child(n+4){border-bottom:1px solid var(--line2)}.grid div:nth-child(n+5){border-bottom:0}}

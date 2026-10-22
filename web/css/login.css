@@ -1,0 +1,27 @@
+html,body{height:100%}
+body{display:flex;flex-direction:column;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;background-position:center}
+body::before{content:"";position:fixed;inset:0;background:radial-gradient(ellipse at center,transparent 0,var(--bg) 70%);pointer-events:none}
+.top,.bot{position:relative;display:flex;justify-content:space-between;gap:12px;padding:18px 28px}
+.bot{margin-top:auto}
+.wrap{position:relative;flex:1;display:grid;place-items:center;padding:16px}
+.card{width:100%;max-width:400px}
+.hd{padding:22px 24px 18px;border-bottom:1px solid var(--line)}
+.hd h1{margin:10px 0 6px;font:600 24px/1.15 var(--sans);letter-spacing:-.01em}.hd p{margin:0;color:var(--mu);font-size:13px}
+form{padding:20px 24px 24px;display:grid;gap:16px}
+.f label{display:block;margin-bottom:8px}
+.in{display:flex;border:1px solid var(--line2);background:#0a0e0b}
+.in:focus-within{border-color:var(--g)}
+.in input{flex:1;min-width:0;background:none;border:0;color:var(--tx);font:400 14px var(--sans);padding:12px 14px;outline:0}
+.in input.code{font:500 20px var(--mono);letter-spacing:.5em;text-align:center}
+.in button{padding:0 14px;font:400 10px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mu);border-left:1px solid var(--line2)}
+.in button:hover{color:var(--tx)}
+.f.bad .in{border-color:var(--red)}
+.chk{display:flex;align-items:center;gap:10px;font-size:12px;color:#aab4ae;cursor:pointer}
+.chk input{accent-color:var(--g);width:14px;height:14px;margin:0}
+.btn{background:var(--lime);color:#0a0f06;padding:13px;font:600 12px var(--mono);letter-spacing:.14em;text-transform:uppercase}
+.btn:hover{filter:brightness(1.06)}.btn:disabled{opacity:.5;cursor:not-allowed}
+.link{color:var(--mu);font:400 11px var(--mono);letter-spacing:.08em;text-align:left;padding:0}.link:hover{color:var(--tx)}
+.msg{min-height:18px;font-size:12px;color:var(--red)}.msg.ok{color:var(--g)}
+.step[hidden]{display:none}
+.nt{padding:12px 24px;border-top:1px solid var(--line);font-size:11px;color:var(--mu)}
+@media(max-width:520px){.top,.bot{padding:14px 16px}.bot span:last-child{display:none}}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Control Plane · Sign in</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+<div class="top lbl"><span><span class="dot"></span>Control Plane / Access</span><span id="clock"></span></div>
+<div class="wrap">
+ <div class="card" role="main">
+  <div class="hd"><div class="lbl" id="stepLbl">Step 1 of 2 · Credentials</div><h1 id="title">Operator sign in.</h1><p id="sub">Restricted to authorised game operations staff.</p></div>
+
+  <form id="f1" class="step" novalidate>
+   <div class="f" id="gE"><label class="lbl" for="email">Email</label><div class="in"><input id="email" type="email" autocomplete="username" required></div></div>
+   <div class="f" id="gP"><label class="lbl" for="pw">Password</label><div class="in"><input id="pw" type="password" autocomplete="current-password" required minlength="8"><button type="button" id="tg" aria-pressed="false">Show</button></div></div>
+   <label class="chk"><input type="checkbox" id="rem"> Trust this device for 7 days</label>
+   <div class="msg" id="m1" role="alert" aria-live="polite"></div>
+   <button class="btn" id="b1">Continue</button>
+  </form>
+
+  <form id="f2" class="step" hidden novalidate>
+   <div class="f" id="gC"><label class="lbl" for="code">Authenticator code</label><div class="in"><input id="code" class="code" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" autocomplete="one-time-code" placeholder="······"></div></div>
+   <div class="msg" id="m2" role="alert" aria-live="polite"></div>
+   <button class="btn" id="b2">Verify and sign in</button>
+   <button type="button" class="link" id="back">← Use a different account</button>
+  </form>
+  <div class="nt">Sessions expire after 12 hours of inactivity. All sign-ins are logged.</div>
+ </div>
+</div>
+<div class="bot lbl"><span><span class="dot"></span>Control Plane</span><span></span></div>
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>
